@@ -3,6 +3,8 @@ import 'package:photogram/enterPage.dart';
 import 'package:photogram/profile/profile.dart';
 import 'package:get/get.dart';
 
+import 'package:photogram/home/homePage.dart';
+
 class Login extends StatelessWidget {
   Login({Key? key}) : super(key: key);
   var _formKey = GlobalKey<FormState>();
@@ -76,12 +78,8 @@ class Login extends StatelessWidget {
             MaterialButton(
               onPressed: () {
                 if (_formKey.currentState!.validate()) {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => Profile(
-                                nickName: '',
-                              )));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomePage()));
                 }
               },
               color: Colors.black,

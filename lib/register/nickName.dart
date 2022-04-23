@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:photogram/home/homePage.dart';
 import 'register.dart';
 import 'login.dart';
 import 'package:photogram/profile/profile.dart';
@@ -59,12 +60,8 @@ class _NickNameState extends State<NickName> {
               onPressed: () {
                 var nickname = _controller.text;
                 print(nickname);
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => Profile(
-                              nickName: nickname,
-                            )));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomePage()));
               },
               color: Colors.black,
               shape: RoundedRectangleBorder(
@@ -83,7 +80,7 @@ class _NickNameState extends State<NickName> {
                 padding: const EdgeInsets.all(25.0),
                 child: RichText(
                   text: TextSpan(
-                    text: 'Ro’yxat o’tish tugmasini bosish orqali siz ',
+                    text: "Ro’yxat o’tish tugmasini bosish orqali siz ",
                     style: TextStyle(color: Colors.black),
                     children: const [
                       TextSpan(
@@ -92,7 +89,7 @@ class _NickNameState extends State<NickName> {
                               fontWeight: FontWeight.bold,
                               color: Colors.black)),
                       TextSpan(
-                        text: 'ijtimoiy tarog’ining ',
+                        text: "ijtimoiy tarog’ining ",
                       ),
                       TextSpan(
                         text: 'Foydalanish shartlari ',
@@ -111,7 +108,7 @@ class _NickNameState extends State<NickName> {
                             color: Colors.black),
                       ),
                       TextSpan(
-                        text: 'ga rozilik bildirgan bo’lasiz.',
+                        text: "ga rozilik bildirgan bo’lasiz.",
                         style: TextStyle(
                           color: Colors.black,
                         ),

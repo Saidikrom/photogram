@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:photogram/home/homePage.dart';
 import 'enterPage.dart';
 
 void main() {
